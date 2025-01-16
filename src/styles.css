@@ -1,0 +1,14 @@
+#content{
+    display: grid;
+    grid-template: 1fr/ 1fr 5fr;
+}
+
+.projectDiv{
+    border: black 1px solid;
+    cursor: pointer;
+}
+
+.todoDiv{
+    display: flex;
+    flex-direction: row;
+}
