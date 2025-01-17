@@ -20,8 +20,6 @@ function projectFormLogic(){
     });
     
     
-    
-    
     closeBtn.addEventListener("click", (event) => {
       event.preventDefault();
       dialog.close();

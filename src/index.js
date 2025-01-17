@@ -1,9 +1,9 @@
 import "./styles.css";
 
 //project creator code
-import { createProject,setAndIncreaseProjectIdCount,appendProjectToArray } from "./project-creator-folder/project-creator";
+import { createProject,setAndIncreaseProjectIdCount,appendProjectToArray } from "./project-code-folder/project-creator-folder/project-creator";
 //project form logic 
-import { projectFormLogic } from "./project-form-folder/project-form";
+import { projectFormLogic } from "./project-code-folder/project-form-folder/project-form";
 
 let selectedProjectId = 0;
 let projectDisplayArray = [];
