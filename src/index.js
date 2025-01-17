@@ -1,9 +1,15 @@
 import "./styles.css";
-// import { createProject } from "./project-creator-folder/project-creator";
+
+//project creator code
 import { createProject,setAndIncreaseProjectIdCount,appendProjectToArray } from "./project-creator-folder/project-creator";
+//project form logic 
+import { projectFormLogic } from "./project-form-folder/project-form";
 
 let selectedProjectId = 0;
 let projectDisplayArray = [];
+
+//running form logic
+projectFormLogic();
 
 let tempProject = createProject("h1Text","pText");
 setAndIncreaseProjectIdCount(tempProject);
