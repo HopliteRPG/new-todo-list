@@ -1,16 +1,25 @@
-export{createProject,appendProjectToArray}
+export{createProject,setAndIncreaseProjectIdCount,appendProjectToArray}
 
-    function createProject(h1Text,pText,id){
+let projectIdCount = 0;
+
+    function createProject(h1Text,pText){
         let h1TextObj = h1Text;
         let pTextObj = pText;
-        let idObj = id;
+        let id = undefined;
         let todoArray = [];
     
-        return{h1TextObj,pTextObj,idObj,todoArray}
+        return{h1TextObj,pTextObj,id,todoArray}
     }
     
+    function setAndIncreaseProjectIdCount(project){
+        project.id = projectIdCount;
+        projectIdCount++;
+    }
+
     function appendProjectToArray(project,projectDisplayArray){
         projectDisplayArray.push(project);
     }
+
+
 
 
