@@ -1,4 +1,7 @@
+// import { projectSubmitFunction } from "./project-submit-function.js";
 export{projectFormLogic}
+
+import { allTogether } from "../all-together";
 
 function projectFormLogic(){
     const contentProjectDiv = document.querySelector(".contentProjectDiv");
@@ -16,6 +19,10 @@ function projectFormLogic(){
     
     form.addEventListener("submit",(event) => {
       event.preventDefault();
+      const formData = new FormData(form);
+      allTogether(formData.get("project_h1"),formData.get("project_p"));
+      form.reset();
+      dialog.close();
 
     });
     

@@ -5,6 +5,8 @@ import { createProject,setAndIncreaseProjectIdCount,appendProjectToArray } from 
 //project form logic 
 import { projectFormLogic } from "./project-code-folder/project-form-folder/project-form";
 
+export {projectDisplayArray}
+
 let selectedProjectId = 0;
 let projectDisplayArray = [];
 
