@@ -1,9 +1,9 @@
 import { createProject,setAndIncreaseProjectIdCount,appendProjectToArray } from "./project-creator-folder/project-creator";
 import { projectDisplayArray } from "..";
 
-export {allTogether}
+export {projectSubmitFunc}
 
-function allTogether(h1,p){
+function projectSubmitFunc(h1,p){
     let tempProject = createProject(h1,p);
     setAndIncreaseProjectIdCount(tempProject);
     appendProjectToArray(tempProject,projectDisplayArray);
