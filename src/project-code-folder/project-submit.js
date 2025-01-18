@@ -1,11 +1,8 @@
-import { createProject,setAndIncreaseProjectIdCount,appendProjectToArray } from "./project-creator-folder/project-creator";
 import { projectDisplayArray } from "..";
+import { createAndAppendProject } from "./project-creator-folder/project-creator";
 
 export {projectSubmitFunc}
 
 function projectSubmitFunc(h1,p){
-    let tempProject = createProject(h1,p);
-    setAndIncreaseProjectIdCount(tempProject);
-    appendProjectToArray(tempProject,projectDisplayArray);
-    console.log(projectDisplayArray);
+    createAndAppendProject(h1,p,projectDisplayArray)
 }

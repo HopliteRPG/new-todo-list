@@ -1,4 +1,4 @@
-export{createProject,setAndIncreaseProjectIdCount,appendProjectToArray}
+export{createProject,setAndIncreaseProjectIdCount,appendProjectToArray,createAndAppendProject}
 
 let projectIdCount = 0;
 
@@ -20,6 +20,11 @@ let projectIdCount = 0;
         projectDisplayArray.push(project);
     }
 
-
+    function createAndAppendProject(h1,p,projectDisplayArray){
+        let tempProject = createProject(h1,p);
+        setAndIncreaseProjectIdCount(tempProject);
+        appendProjectToArray(tempProject,projectDisplayArray);
+        console.log(projectDisplayArray);
+    }
 
 
