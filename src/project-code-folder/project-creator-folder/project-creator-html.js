@@ -1,3 +1,5 @@
+  export{appendProjectsToDom}
+  
   //Declaring HTML Variables
   const divCreate = document.createElement("div");
   const h1Create = document.createElement("h1");
