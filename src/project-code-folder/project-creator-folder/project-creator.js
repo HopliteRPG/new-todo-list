@@ -1,3 +1,4 @@
+import { updateSelectedProjectId } from "../../event-listener-code/get-project-id";
 export{createProject,setAndIncreaseProjectIdCount,appendProjectToArray,createAndAppendProject}
 
 let projectIdCount = 0;
@@ -24,6 +25,7 @@ let projectIdCount = 0;
         let tempProject = createProject(h1,p);
         setAndIncreaseProjectIdCount(tempProject);
         appendProjectToArray(tempProject,projectDisplayArray);
+        updateSelectedProjectId(tempProject.id);
         console.log(projectDisplayArray);
     }
 

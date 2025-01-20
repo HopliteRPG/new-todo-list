@@ -7,7 +7,6 @@ import { projectFormLogic } from "./project-code-folder/project-form-folder/proj
 
 export {projectDisplayArray}
 
-let selectedProjectId = 0;
 let projectDisplayArray = [];
 
 //running form logic
