@@ -4,8 +4,9 @@
   const divCreate = document.createElement("div");
   const h1Create = document.createElement("h1");
   const pCreate = document.createElement("p");
+  const buttonCreate = document.createElement("button");
   const contentProjectDiv = document.querySelector(".contentProjectDiv");
-
+  
 function createDivSection(parentDiv,div,className){
     let cloneDivCreate = div.cloneNode(true);
     cloneDivCreate.classList.add(className)
@@ -27,6 +28,13 @@ function createH1(div,h1,text,className){
     div.appendChild(cloneH1Create);
 }
 
+function createButton(div,button){
+  let cloneButtonCreate = button.cloneNode(true);
+  cloneButtonCreate.innerText = "Delete";
+  cloneButtonCreate.classList.add("deleteProjectButton");
+  div.appendChild(cloneButtonCreate);
+}
+
 function setProjectHTMLID(project,id){
   project.setAttribute("id", id)
 
@@ -42,6 +50,7 @@ function appendProjectsToDom(projectDisplayArray){
         let projectDiv = createDivSection(contentProjectDiv,divCreate,"projectDiv");
         createH1(projectDiv.cloneDivCreate,h1Create,project.h1TextObj,"projectH1");
         createP(projectDiv.cloneDivCreate,pCreate,project.pTextObj,"projectP");
+        createButton(projectDiv.cloneDivCreate,buttonCreate);
         setProjectHTMLID(projectDiv.cloneDivCreate,project.id);
         console.log("appended")
     });
