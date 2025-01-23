@@ -9,9 +9,11 @@ import { appendProjectsToDom } from "./project-code-folder/project-creator-folde
 //project form logic 
 import { projectFormLogic } from "./project-code-folder/project-form-folder/project-form";
 
+import { touchHTML } from "./event-listener-code/get-project-id";
 export {projectDisplayArray}
 
 let projectDisplayArray = [];
+const contentProjectDiv = document.querySelector(".contentProjectDiv")
 
 //running form logic
 projectFormLogic();
@@ -30,5 +32,7 @@ console.log(projectDisplayArray);
 //Appending them to Dom
 appendProjectsToDom(projectDisplayArray);
 
+
+touchHTML(contentProjectDiv,".projectDiv")
 
 

@@ -12,5 +12,5 @@ function projectSubmitFunc(h1,p){
     createAndAppendProject(h1,p,projectDisplayArray);
     appendProjectsToDom(projectDisplayArray);
     touchHTML(contentProjectDiv,".projectDiv");
-    getProjectHTMLId(contentProjectDiv,".deleteProjectButton")
+    getProjectHTMLId(contentProjectDiv,".deleteProjectButton");
 }
