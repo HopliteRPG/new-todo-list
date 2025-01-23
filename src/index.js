@@ -10,6 +10,9 @@ import { appendProjectsToDom } from "./project-code-folder/project-creator-folde
 import { projectFormLogic } from "./project-code-folder/project-form-folder/project-form";
 
 import { touchHTML } from "./event-listener-code/get-project-id";
+
+import { getProjectHTMLId } from "./event-listener-code/delete-project";
+
 export {projectDisplayArray}
 
 let projectDisplayArray = [];
@@ -33,6 +36,8 @@ console.log(projectDisplayArray);
 appendProjectsToDom(projectDisplayArray);
 
 
-touchHTML(contentProjectDiv,".projectDiv")
+touchHTML(contentProjectDiv,".projectDiv");
+
+getProjectHTMLId(contentProjectDiv,".deleteProjectButton");
 
 
