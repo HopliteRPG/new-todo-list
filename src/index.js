@@ -9,8 +9,10 @@ import { appendProjectsToDom } from "./project-code-folder/project-creator-folde
 //project form logic 
 import { projectFormLogic } from "./project-code-folder/project-form-folder/project-form";
 
+//touchHTML code
 import { touchHTML } from "./event-listener-code/get-project-id";
 
+//delete project code
 import { deleteProject } from "./event-listener-code/delete-project";
 
 export {projectDisplayArray}
@@ -35,9 +37,10 @@ console.log(projectDisplayArray);
 //Appending them to Dom
 appendProjectsToDom(projectDisplayArray);
 
-
+//Gets the project id (Used for something not used in the code right now)
 touchHTML(contentProjectDiv,".projectDiv");
 
+//makes the delete buttons able to delete projects
 deleteProject(contentProjectDiv,".deleteProjectButton");
 
 
