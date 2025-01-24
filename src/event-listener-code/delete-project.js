@@ -1,9 +1,9 @@
-export{getProjectHTMLId}
+export{deleteProject}
 import { projectDisplayArray } from "..";
 import { appendProjectsToDom } from "../project-code-folder/project-creator-folder/project-creator-html";
 
 
-function getProjectHTMLId(dom,targetHTMLClassname){
+function deleteProject(dom,targetHTMLClassname){
     let targetHTML = dom.querySelectorAll(targetHTMLClassname);
     targetHTML.forEach(deleteButton => {
         deleteButton.addEventListener("click",event=>{

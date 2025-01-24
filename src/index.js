@@ -11,7 +11,7 @@ import { projectFormLogic } from "./project-code-folder/project-form-folder/proj
 
 import { touchHTML } from "./event-listener-code/get-project-id";
 
-import { getProjectHTMLId } from "./event-listener-code/delete-project";
+import { deleteProject } from "./event-listener-code/delete-project";
 
 export {projectDisplayArray}
 
@@ -38,6 +38,6 @@ appendProjectsToDom(projectDisplayArray);
 
 touchHTML(contentProjectDiv,".projectDiv");
 
-getProjectHTMLId(contentProjectDiv,".deleteProjectButton");
+deleteProject(contentProjectDiv,".deleteProjectButton");
 
 
