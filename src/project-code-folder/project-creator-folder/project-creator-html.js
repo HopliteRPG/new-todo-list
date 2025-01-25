@@ -1,5 +1,6 @@
   export{appendProjectsToDom}
-  
+  import { deleteProject } from "../../event-listener-code/delete-project";
+
   //Declaring HTML Variables
   const divCreate = document.createElement("div");
   const h1Create = document.createElement("h1");
@@ -54,6 +55,6 @@ function appendProjectsToDom(projectDisplayArray){
         setProjectHTMLID(projectDiv.cloneDivCreate,project.id);
         console.log("appended")
     });
-
+    deleteProject(contentProjectDiv,".deleteProjectButton");
 
 }
