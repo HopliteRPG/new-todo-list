@@ -34,6 +34,7 @@ function createButton(div,button){
   cloneButtonCreate.innerText = "Delete";
   cloneButtonCreate.classList.add("deleteProjectButton");
   div.appendChild(cloneButtonCreate);
+  deleteProject(cloneButtonCreate);
 }
 
 function setProjectHTMLID(project,id){
@@ -55,6 +56,6 @@ function appendProjectsToDom(projectDisplayArray){
         setProjectHTMLID(projectDiv.cloneDivCreate,project.id);
         console.log("appended")
     });
-    deleteProject(contentProjectDiv,".deleteProjectButton");
+
 
 }

@@ -3,12 +3,10 @@ import { projectDisplayArray } from "..";
 import { appendProjectsToDom } from "../project-code-folder/project-creator-folder/project-creator-html";
 
 
-function deleteProject(dom,targetHTMLClassname){
-    let targetHTML = dom.querySelectorAll(targetHTMLClassname);
-    targetHTML.forEach(deleteButton => {
+function deleteProject(deleteButton){
         deleteButton.addEventListener("click",event=>{
-
             let deleteButtonParentDivId = event.currentTarget.parentNode.id;
+
             
             function getUniqueId(object) { 
                 return object.id == deleteButtonParentDivId;
@@ -17,14 +15,17 @@ function deleteProject(dom,targetHTMLClassname){
             const selectedIndex = projectDisplayArray.findIndex(getUniqueId);
 
             removeProjectFromArray(projectDisplayArray,selectedIndex);
-            appendProjectsToDom(projectDisplayArray);
+
+            console.log(`deleteButtonParentDivId: ${deleteButtonParentDivId}`)
+            console.log(projectDisplayArray);
+
+            appendProjectsToDom(projectDisplayArray)
+
         });
-    });
 }
 
 function removeProjectFromArray(array,index){
     array.splice(index,1)
 }
 
-
-
+ 

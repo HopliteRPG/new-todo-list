@@ -40,7 +40,5 @@ appendProjectsToDom(projectDisplayArray);
 //Gets the project id (Used for something not used in the code right now)
 touchHTML(contentProjectDiv,".projectDiv");
 
-//makes the delete buttons able to delete projects
-deleteProject(contentProjectDiv,".deleteProjectButton");
 
 
