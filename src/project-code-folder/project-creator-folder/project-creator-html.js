@@ -51,12 +51,16 @@ function appendProjectsToDom(projectDisplayArray){
     clearProjectDisplay();
     projectDisplayArray.forEach(project => {
         let projectDiv = createDivSection(contentProjectDiv,divCreate,"projectDiv");
-        createH1(projectDiv.cloneDivCreate,h1Create,project.h1TextObj,"projectH1");
-        createP(projectDiv.cloneDivCreate,pCreate,project.pTextObj,"projectP");
-        createButton(projectDiv.cloneDivCreate,buttonCreate);
-        setProjectHTMLID(projectDiv.cloneDivCreate,project.id);
+        let projectContentDiv = createDivSection(projectDiv.cloneDivCreate,divCreate,"projectContentDiv")
+        let deleteDiv = createDivSection(projectDiv.cloneDivCreate,divCreate,"deleteDiv");
+
+        createH1(projectContentDiv.cloneDivCreate,h1Create,project.h1TextObj,"projectH1");
+        createP(projectContentDiv.cloneDivCreate,pCreate,project.pTextObj,"projectP");
+        createButton(deleteDiv.cloneDivCreate,buttonCreate);
+        setProjectHTMLID(projectContentDiv.cloneDivCreate,project.id);
+        setProjectHTMLID(deleteDiv.cloneDivCreate,project.id);
         console.log("appended")
     });
-    touchHTML(contentProjectDiv,".projectDiv")
+    touchHTML(contentProjectDiv,".projectContentDiv")
 
 }

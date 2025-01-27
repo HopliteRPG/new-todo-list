@@ -12,3 +12,22 @@
     display: flex;
     flex-direction: row;
 }
+
+
+.projectH1{
+    padding: 21px 0px 21px 0px;
+}
+
+.projectP{
+    padding: 16px 0px 16px 0px;
+
+}
+
+.projectH1,.projectP{
+    margin: 0;
+}
+
+.deleteProjectButton{
+    width: 100%;
+}
+
