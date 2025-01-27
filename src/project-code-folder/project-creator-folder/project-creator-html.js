@@ -1,5 +1,6 @@
   export{appendProjectsToDom}
   import { deleteProject } from "../../event-listener-code/delete-project";
+  import { touchHTML } from "../../event-listener-code/get-project-id";
 
   //Declaring HTML Variables
   const divCreate = document.createElement("div");
@@ -56,6 +57,6 @@ function appendProjectsToDom(projectDisplayArray){
         setProjectHTMLID(projectDiv.cloneDivCreate,project.id);
         console.log("appended")
     });
-
+    touchHTML(contentProjectDiv,".projectDiv")
 
 }
