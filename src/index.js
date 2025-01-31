@@ -9,6 +9,8 @@ import { appendProjectsToDom } from "./project-code-folder/project-creator-folde
 //project form logic 
 import { projectFormLogic } from "./project-code-folder/project-form-folder/project-form";
 
+import {allTogether} from "./todo-code-folder/todo-code";
+
 
 export {projectDisplayArray}
 
@@ -33,6 +35,8 @@ console.log(projectDisplayArray);
 appendProjectsToDom(projectDisplayArray);
 
 
+//Creating a todo
+allTogether(projectDisplayArray,0,0);
 
 
 
