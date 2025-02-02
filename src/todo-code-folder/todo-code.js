@@ -1,4 +1,4 @@
-export {createTodoObjectHolder,createTodoObject,allTogether}
+export {todoObjectHolderCreationAndAppending,createTodo}
  
 
 
@@ -11,38 +11,45 @@ function createTodoObjectHolder(){
 
 function appendTodoObjectHolderToArray(array,index,createTodoObjectHolder){
     array[index].todoArray.push(createTodoObjectHolder);
-    console.log(array);
 }
 
-//Creating the Todo
-function createTodoObject(id,description){
-    let todoId = id;
+//Creating the Todo Object
+function createTodoObject(description){
+    let todoId;
     let todoDescription = description; 
     let checkedStatus = false;
     return {todoId,todoDescription,checkedStatus}
 }
 
 
-
 function appendTodoObjectToArray(array,projectIndex,todoIndex,todoObject){
     array[projectIndex].todoArray[todoIndex].subTodoArray.push(todoObject);
-    console.log(array);
 }
 
-// function appendAndIncreaseId(array,index,todoObject){
-//     array[index].todoArray.todoObjectHolder.subTodoArray
-//     array[index].todoArray.todoObjectHolder.todoIdCounter
-// }
+function appendAndIncreaseId(array,projectIndex,todoIndex){
+    let currentTodoIdCounterValue = array[projectIndex].todoArray[todoIndex].todoIdCounter
+
+    let thingToIncrease = array[projectIndex].todoArray[todoIndex].subTodoArray.at(-1);
+
+    thingToIncrease.todoId = currentTodoIdCounterValue;
+
+    array[projectIndex].todoArray[todoIndex].todoIdCounter++;
+}
+
+//NOTE MAKE SURE TO MAKE A FIND INDEX FUNCTION TO FIND THE ID IN THE ARRAY
 
 
-function allTogether(array,projectIndex,todoIndex){
+//Export Functions
+function todoObjectHolderCreationAndAppending(array,projectIndex){
     let tempTodoObjectHolder = createTodoObjectHolder();
     console.log(tempTodoObjectHolder)
     appendTodoObjectHolderToArray(array,projectIndex,tempTodoObjectHolder);
-
-
-    let tempCreateTodoObject = createTodoObject(0,"sfadasfd");
-    appendTodoObjectToArray(array,todoIndex,0,tempCreateTodoObject);
-    console.log(array);
-
 }
+
+function createTodo(array,projectIndex,description){
+    let tempCreateTodoObject = createTodoObject(description);
+    appendTodoObjectToArray(array,projectIndex,0,tempCreateTodoObject);
+    appendAndIncreaseId(array,projectIndex,0)
+    console.log(array);
+}
+

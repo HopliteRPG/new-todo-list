@@ -9,8 +9,7 @@ import { appendProjectsToDom } from "./project-code-folder/project-creator-folde
 //project form logic 
 import { projectFormLogic } from "./project-code-folder/project-form-folder/project-form";
 
-import {allTogether} from "./todo-code-folder/todo-code";
-
+import {todoObjectHolderCreationAndAppending,createTodo} from "./todo-code-folder/todo-code.js"
 
 export {projectDisplayArray}
 
@@ -24,19 +23,22 @@ projectFormLogic();
 let tempProject = createProject("h1Text","pText");
 setAndIncreaseProjectIdCount(tempProject);
 appendProjectToArray(tempProject,projectDisplayArray);
-console.log(projectDisplayArray);
 
 let tempProject2 = createProject("h1Text2","pText2");
 setAndIncreaseProjectIdCount(tempProject2);
 appendProjectToArray(tempProject2,projectDisplayArray);
-console.log(projectDisplayArray);
 
 //Appending them to Dom
 appendProjectsToDom(projectDisplayArray);
 
+//Todo Creation
 
-//Creating a todo
-allTogether(projectDisplayArray,0,0);
+todoObjectHolderCreationAndAppending(projectDisplayArray,0);
+createTodo(projectDisplayArray,0,"test1")
+createTodo(projectDisplayArray,0,"test2")
+createTodo(projectDisplayArray,0,"test3")
 
-
-
+todoObjectHolderCreationAndAppending(projectDisplayArray,1);
+createTodo(projectDisplayArray,1,"test1")
+createTodo(projectDisplayArray,1,"test2")
+createTodo(projectDisplayArray,1,"test3")
