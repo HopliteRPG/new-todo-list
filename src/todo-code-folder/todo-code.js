@@ -1,4 +1,4 @@
-export {todoObjectHolderCreationAndAppending,createTodo}
+export {todoObjectHolderCreationAndAppending,createTodo,findIndex}
  
 
 
@@ -37,6 +37,15 @@ function appendAndIncreaseId(array,projectIndex,todoIndex){
 }
 
 //NOTE MAKE SURE TO MAKE A FIND INDEX FUNCTION TO FIND THE ID IN THE ARRAY
+
+function findIndex(array,projectId){
+        function getUniqueId(object) { 
+            return object.id == projectId;
+          }
+        
+        const selectedIndex = array.findIndex(getUniqueId);
+        return selectedIndex
+}
 
 
 //Export Functions

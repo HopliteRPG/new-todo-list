@@ -9,7 +9,7 @@ import { appendProjectsToDom } from "./project-code-folder/project-creator-folde
 //project form logic 
 import { projectFormLogic } from "./project-code-folder/project-form-folder/project-form";
 
-import {todoObjectHolderCreationAndAppending,createTodo} from "./todo-code-folder/todo-code.js"
+import {todoObjectHolderCreationAndAppending,createTodo,findIndex} from "./todo-code-folder/todo-code.js"
 
 export {projectDisplayArray}
 
@@ -34,11 +34,11 @@ appendProjectsToDom(projectDisplayArray);
 //Todo Creation
 
 todoObjectHolderCreationAndAppending(projectDisplayArray,0);
-createTodo(projectDisplayArray,0,"test1")
-createTodo(projectDisplayArray,0,"test2")
-createTodo(projectDisplayArray,0,"test3")
+createTodo(projectDisplayArray,findIndex(projectDisplayArray,0),"test1UsingIndex")
+createTodo(projectDisplayArray,findIndex(projectDisplayArray,0),"test2UsingIndex")
+createTodo(projectDisplayArray,findIndex(projectDisplayArray,0),"test3UsingIndex")
 
 todoObjectHolderCreationAndAppending(projectDisplayArray,1);
-createTodo(projectDisplayArray,1,"test1")
-createTodo(projectDisplayArray,1,"test2")
-createTodo(projectDisplayArray,1,"test3")
+createTodo(projectDisplayArray,1,"test1UsingIndex")
+createTodo(projectDisplayArray,1,"test2UsingIndex")
+createTodo(projectDisplayArray,1,"test3UsingIndex")
