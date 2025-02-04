@@ -9,7 +9,7 @@ import { appendProjectsToDom } from "./project-code-folder/project-creator-folde
 //project form logic 
 import { projectFormLogic } from "./project-code-folder/project-form-folder/project-form";
 
-import {todoObjectHolderCreationAndAppending,createTodo,findIndex} from "./todo-code-folder/todo-code.js"
+import {todoObjectHolderCreationAndAppending,createTodo,findIndex} from "./todo-code-folder/todo-creator-folder/todo-code.js"
 
 export {projectDisplayArray}
 
