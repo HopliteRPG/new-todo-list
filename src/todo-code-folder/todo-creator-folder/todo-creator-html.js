@@ -35,8 +35,8 @@ cloneButtonCreate.classList.add("addTodoButton");
 div.appendChild(cloneButtonCreate);
 }
 
-function setTodoHTMLID(project,id){
-project.setAttribute("id", id)
+function setTodoHTMLID(todo,id){
+todo.setAttribute("id", id)
 
 }
 
