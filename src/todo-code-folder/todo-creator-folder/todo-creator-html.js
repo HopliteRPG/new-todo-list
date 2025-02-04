@@ -1,4 +1,6 @@
 //Declaring HTML Variables
+export {appendAddTodoButtonToDom}
+
 const divCreate = document.createElement("div");
 const h1Create = document.createElement("h1");
 const pCreate = document.createElement("p");
@@ -43,6 +45,11 @@ todo.setAttribute("id", id)
 function clearTodoDisplay(){
     TodoDiv.innerText = "";
 }
+
+function appendAddTodoButtonToDom(){
+  createButton(buttonContentTodoDiv,buttonCreate)
+}
+
 
 // function appendProjectsToDom(projectDisplayArray){
 //   clearProjectDisplay();
