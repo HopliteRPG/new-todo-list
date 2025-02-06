@@ -11,6 +11,8 @@ import { projectFormLogic } from "./project-code-folder/project-form-folder/proj
 
 import {todoObjectHolderCreationAndAppending,createTodo,findIndex} from "./todo-code-folder/todo-creator-folder/todo-creator.js"
 
+import { appendTodosToDom } from "./todo-code-folder/todo-creator-folder/todo-creator-html.js";
+
 export {projectDisplayArray}
 
 let projectDisplayArray = [];
@@ -42,3 +44,5 @@ todoObjectHolderCreationAndAppending(projectDisplayArray,1);
 createTodo(projectDisplayArray,1,"test1UsingIndex")
 createTodo(projectDisplayArray,1,"test2UsingIndex")
 createTodo(projectDisplayArray,1,"test3UsingIndex")
+
+appendTodosToDom()
