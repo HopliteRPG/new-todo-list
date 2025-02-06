@@ -45,4 +45,6 @@ createTodo(projectDisplayArray,1,"test1UsingIndex")
 createTodo(projectDisplayArray,1,"test2UsingIndex")
 createTodo(projectDisplayArray,1,"test3UsingIndex")
 
-appendTodosToDom()
+
+//Appending Todos
+appendTodosToDom(projectDisplayArray,0)

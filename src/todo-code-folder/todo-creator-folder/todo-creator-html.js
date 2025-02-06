@@ -51,6 +51,10 @@ function appendTodosToDom(projectDisplayArray,projectId){
  clearTodoDisplay();
  createButton(buttonContentTodoDiv,buttonCreate,"Add Todo","addTodoButton");
 
+ projectDisplayArray[projectId].todoArray[0].subTodoArray.forEach(todo => {
+  console.log(todo);
+ });
+
 
 }
 
