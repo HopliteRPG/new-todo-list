@@ -47,11 +47,23 @@ function clearTodoDisplay(){
 
 }
 
+function findIndex(array,projectId){
+  function getUniqueId(object) { 
+      return object.id == projectId;
+    }
+  
+  const selectedIndex = array.findIndex(getUniqueId);
+  return selectedIndex
+}
+
+
+
 function appendTodosToDom(projectDisplayArray,projectId){
  clearTodoDisplay();
  createButton(buttonContentTodoDiv,buttonCreate,"Add Todo","addTodoButton");
+  let projectIndex = findIndex(projectDisplayArray,projectId)
 
- projectDisplayArray[projectId].todoArray[0].subTodoArray.forEach(todo => {
+ projectDisplayArray[projectIndex].todoArray[0].subTodoArray.forEach(todo => {
   console.log(todo);
  });
 
