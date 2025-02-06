@@ -30,25 +30,21 @@ function createH1(div,h1,text,className){
   div.appendChild(cloneH1Create);
 }
 
-function createButton(div,button){
+function createButton(div,button,text,btnClassName){
 let cloneButtonCreate = button.cloneNode(true);
-cloneButtonCreate.innerText = "Add Todo";
-cloneButtonCreate.classList.add("addTodoButton");
+cloneButtonCreate.innerText = text;
+cloneButtonCreate.classList.add(btnClassName);
 div.appendChild(cloneButtonCreate);
 }
 
 function setTodoHTMLID(todo,id){
 todo.setAttribute("id", id)
-
 }
 
 function clearTodoDisplay(){
     TodoDiv.innerText = "";
 }
 
-function appendAddTodoButtonToDom(){
-  createButton(buttonContentTodoDiv,buttonCreate)
-}
 
 
 // function appendProjectsToDom(projectDisplayArray){
