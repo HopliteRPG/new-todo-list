@@ -34,17 +34,17 @@ appendProjectToArray(tempProject2,projectDisplayArray);
 appendProjectsToDom(projectDisplayArray);
 
 //Todo Creation
+let testId = 0
+todoObjectHolderCreationAndAppending(projectDisplayArray,testId);
+createTodo(projectDisplayArray,testId,"test1UsingIndex")
+createTodo(projectDisplayArray,testId,"test2UsingIndex")
+createTodo(projectDisplayArray,testId,"test3UsingIndex")
 
-todoObjectHolderCreationAndAppending(projectDisplayArray,0);
-createTodo(projectDisplayArray,findIndex(projectDisplayArray,0),"test1UsingIndex")
-createTodo(projectDisplayArray,findIndex(projectDisplayArray,0),"test2UsingIndex")
-createTodo(projectDisplayArray,findIndex(projectDisplayArray,0),"test3UsingIndex")
-
-todoObjectHolderCreationAndAppending(projectDisplayArray,1);
-createTodo(projectDisplayArray,1,"test1UsingIndex")
-createTodo(projectDisplayArray,1,"test2UsingIndex")
-createTodo(projectDisplayArray,1,"test3UsingIndex")
+// todoObjectHolderCreationAndAppending(projectDisplayArray,1);
+// createTodo(projectDisplayArray,1,"test1UsingIndex")
+// createTodo(projectDisplayArray,1,"test2UsingIndex")
+// createTodo(projectDisplayArray,1,"test3UsingIndex")
 
 
 //Appending Todos
-appendTodosToDom(projectDisplayArray,0)
+appendTodosToDom(projectDisplayArray,0);

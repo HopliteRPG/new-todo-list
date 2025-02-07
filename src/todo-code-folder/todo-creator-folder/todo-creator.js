@@ -49,13 +49,15 @@ function findIndex(array,projectId){
 
 
 //Export Functions
-function todoObjectHolderCreationAndAppending(array,projectIndex){
+function todoObjectHolderCreationAndAppending(array,projectId){
     let tempTodoObjectHolder = createTodoObjectHolder();
     console.log(tempTodoObjectHolder)
+    let projectIndex = findIndex(array,projectId);
     appendTodoObjectHolderToArray(array,projectIndex,tempTodoObjectHolder);
 }
 
-function createTodo(array,projectIndex,description){
+function createTodo(array,projectId,description){
+    let projectIndex = findIndex(array,projectId)
     let tempCreateTodoObject = createTodoObject(description);
     appendTodoObjectToArray(array,projectIndex,0,tempCreateTodoObject);
     appendAndIncreaseId(array,projectIndex,0)
