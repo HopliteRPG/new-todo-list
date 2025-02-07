@@ -66,9 +66,10 @@ function appendTodosToDom(projectDisplayArray,projectId){
  projectDisplayArray[projectIndex].todoArray[0].subTodoArray.forEach(todo => {
     let todoDiv = createDivSection(contentTodoDiv,divCreate,"todoDiv");
     let todoContentDiv = createDivSection(todoDiv.cloneDivCreate,divCreate,"todoContentDiv");
-    let todoDeleteDiv = createDivSection(todoDiv.cloneDivCreate,divCreate,"todoDeleteDiv");
+    let todoButtonsDiv = createDivSection(todoDiv.cloneDivCreate,divCreate,"todoButtonsDiv");
 
     createP(todoContentDiv.cloneDivCreate,pCreate,todo.todoDescription,"projectP");
+    createButton(todoButtonsDiv.cloneDivCreate,buttonCreate,"Delete Todo","deleteTodoButton");
 
  });
 
