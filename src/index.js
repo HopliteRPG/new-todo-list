@@ -26,9 +26,9 @@ let tempProject = createProject("h1Text","pText");
 setAndIncreaseProjectIdCount(tempProject);
 appendProjectToArray(tempProject,projectDisplayArray);
 
-let tempProject2 = createProject("h1Text2","pText2");
-setAndIncreaseProjectIdCount(tempProject2);
-appendProjectToArray(tempProject2,projectDisplayArray);
+// let tempProject2 = createProject("h1Text2","pText2");
+// setAndIncreaseProjectIdCount(tempProject2);
+// appendProjectToArray(tempProject2,projectDisplayArray);
 
 //Appending them to Dom
 appendProjectsToDom(projectDisplayArray);

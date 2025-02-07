@@ -1,4 +1,5 @@
 import { updateSelectedProjectId } from "../../event-listener-code/get-project-id";
+import { todoObjectHolderCreationAndAppending } from "../../todo-code-folder/todo-creator-folder/todo-creator";
 export{createProject,setAndIncreaseProjectIdCount,appendProjectToArray,createAndAppendProject}
 
 let projectIdCount = 0;
@@ -26,6 +27,7 @@ let projectIdCount = 0;
         setAndIncreaseProjectIdCount(tempProject);
         appendProjectToArray(tempProject,projectDisplayArray);
         updateSelectedProjectId(tempProject.id);
+        todoObjectHolderCreationAndAppending(projectDisplayArray,tempProject.id);
         console.log(projectDisplayArray);
     }
 
